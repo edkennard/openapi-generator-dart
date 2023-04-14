@@ -5,14 +5,21 @@ void main() {
   runApp(const MyApp());
 }
 
+// @Openapi(
+//     additionalProperties:
+//         DioProperties(pubName: 'topaz_api', pubAuthor: 'Topaz Tech Ltd'),
+//     inputSpecFile: 'topaz_api_spec/merged.yaml',
+//     // typeMappings: {'Pet': 'ExamplePet'},
+//     generatorName: Generator.dio,
+//     alwaysRun: true,
+//     outputDirectory: 'api/topaz_api')
 @Openapi(
     additionalProperties:
-        DioProperties(pubName: 'topaz_api', pubAuthor: 'Topaz Tech Ltd'),
-    inputSpecFile: 'topaz_api_spec/merged.yaml',
-    // typeMappings: {'Pet': 'ExamplePet'},
+    DioProperties(pubName: 'topaz_connect_api', pubAuthor: 'Topaz Tech Ltd'),
+    inputSpecFile: 'topaz_api_spec/mappingData.yaml',
     generatorName: Generator.dio,
     alwaysRun: true,
-    outputDirectory: 'api/topaz_api')
+    outputDirectory: 'api/topaz_connect_api')
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
